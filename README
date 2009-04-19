@@ -1,0 +1,29 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2613
+
+Vimstall is a script to install vim plugins automatically.
+
+Syntax:
+	vimstall.sh <filename>|<dirname>
+
+If you run the script on filename it is treated as vim plugin, if run on directory
+it will try to install all files from this directory like they all are vim plugins.
+
+Vimstall supports vimballs (vim is run to install them), simple vim files
+(they are treated as sinlge plugin and are copied into ~/.vim/plugin/ directory
+and packed files (zips & tarballs) in which case archive must contain either
+vim/vimball file or packed installation of a plugin (i.e. directories to put into
+~/.vim like `doc', `plugin', `autoload' etc.)
+
+If during installation process the script runs into some unknown file, it will
+report this file's name into stderr.
+
+This script can be used with `downloadvimscripts' script to update & install
+vim plugins automatically.
+
+Please note: this script is *beta* and not well tested in all configurations.
+I tried to handle most package types met on vim.org, so it should work fine
+most of time (and it works for me :), but it is strongly advised to backup
+your ~/.vim directory before you run this script.
+
+Best used with downloadvimscripts (http://www.vim.org/scripts/script.php?script_id=2444).
+
